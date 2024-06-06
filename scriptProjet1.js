@@ -1,7 +1,10 @@
 function displayImage(){
-    let y = document.getElementById("ARN").value;
-    let x = y.toUpperCase();
+    let arn_value = document.getElementById("ARN").value;
+    let arn_value_up = arn_value.toUpperCase();
+    fetchImage(arn_value_up);
+}
 
+function fetchImage(x){
     if (x.length == 3) {
 
             if (x == "UUU" || x == "UUC") {
@@ -92,8 +95,10 @@ function displayImage(){
                 }         
  
         } 
+        
    else {
     document.getElementById("displayImageDiv").innerHTML = ''; 
     }
+
 
 }
